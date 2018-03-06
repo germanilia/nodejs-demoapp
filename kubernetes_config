@@ -1,4 +1,4 @@
-gcloud config set project lively-guard-179015
+gcloud config set project openhouse-197207
 gcloud config set compute/zone europe-west1-c
 gcloud config set compute/region europe-west
 
@@ -7,7 +7,7 @@ gcloud config list
 gcloud container clusters create demo-cluster --num-nodes 3 (long step 5-7 minutes)
 
 #manually trigger
-kubectl run demo-app --image=gcr.io/lively-guard-179015/sela-open-house:[IMAGE_TAG]
+kubectl run demo-app --image=gcr.io/openhouse-197207/sela-open-house:[IMAGE_TAG]
 
 kubectl get pods
 kubectl expose deployment demo-app --port=80 --target-port=3000 --type=LoadBalancer
